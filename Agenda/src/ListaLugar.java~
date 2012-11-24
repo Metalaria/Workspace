@@ -1,0 +1,48 @@
+import java.util.Vector;
+public class ListaLugar implements Acceso {
+
+	
+	Vector <Lugar> vLugares; 
+		
+	public ListaLugar() {
+		super();
+		this.vLugares = vLugares;
+	}
+
+	public void añadir(Object o) {
+		System.out.println("Nombre del lugar: ");
+		String nom=LeerTeclado.readString();
+		System.out.println("Direccion: ");
+		String dir=LeerTeclado.readString();
+		System.out.println("Telefono: ");
+		String tel=LeerTeclado.readString();
+		Lugar lu = new Lugar(nom, dir, tel);
+		vLugares.add(lu);
+	}
+
+	public void borrar(Object o) {
+		System.out.println("Introduzca el nombre del lugar a eliminar");
+		String nombreLugar=LeerTeclado.readString();
+		boolean enc=false;
+		Lugar l=null;
+		
+		for (int i=0; i<vLugares.size(); i++)
+			if (vLugares.elementAt(i)!=null && vLugares.elementAt(i).equals(l.getNombre())){
+				enc=true;
+				l=(Lugar) vLugares.elementAt(i);
+				if (enc){
+					System.out.println("El lugar a eliminar es : "+l.toString());
+					vLugares.remove(i);
+				}
+				break;
+			}	
+	}
+
+	public void buscar(String nombre) {
+
+	}
+
+	public void listado() {
+
+	}
+}

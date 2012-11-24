@@ -1,0 +1,49 @@
+import java.util.Vector;
+public class ListaPersona implements Acceso {
+
+	Vector <Persona> vPersonas;
+	
+	public ListaPersona() {
+		super();
+		this.vPersonas = vPersonas;
+	}
+	
+	
+
+	public void añadir(Object o) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void borrar(Object o) {
+		System.out.println("Introduzca el nombre de la persona a eliminar");
+		String nombreLugar=LeerTeclado.readString();
+		boolean enc=false;
+		Persona p=null;
+		for (int i=0; i<vPersonas.size(); i++)
+			if (vPersonas.elementAt(i)!=null && vPersonas.elementAt(i).equals(p.getNombre())){
+				enc=true;
+				p=(Persona) vPersonas.elementAt(i);
+				if (enc){
+					System.out.println("El lugar a eliminar es : "+p.toString());
+					vPersonas.remove(i);
+				}
+				break;
+			}	
+
+	}
+
+	@Override
+	public void buscar(String nombre) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void listado() {
+		// TODO Auto-generated method stub
+
+	}
+
+}
